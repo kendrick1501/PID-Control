@@ -17,7 +17,15 @@ The overall performance of our AV in the simulator track can be seen in the vide
 
 [![](http://img.youtube.com/vi/qpNthzagWXM/0.jpg)](http://www.youtube.com/watch?v=qpNthzagWXM)
 
-The speed of our AV is regulated by another PID controller with the gains set as Kp = 7.5E-1, Ki = 15E-5, and Kd = 1.15E-1. This controller provides the throttle command to maintain a desired speed (55 MPH in the case shown above). This command is further compensated by the square of the cross-track error multiplied by a constant to guarantee a safe speed when the cross-track error exceeds certain values. The effect of such a regulation is illustrated in the videos below.
+The speed of our AV is regulated by another PID controller with the gains set as Kp = 7.5E-1, Ki = 15E-5, and Kd = 1.15E-1. This controller provides the throttle command to maintain a desired speed (55 MPH in the case shown above). This command is further compensated by the square of the cross-track error multiplied by a constant to guarantee a safe speed when the cross-track error exceeds certain values, as shown in the following code:
+```C++
+//Release the gas pedal if the deviation from the lane's center is high
+throttle_value = speed_pid.TotalError() - 1.25*cte*cte;
+if(throttle_value<-0.01){
+throttle_value=-0.01;
+}
+```
+The effect of such a regulation is illustrated in the videos below.
 
 ### Safe speed controller
 
