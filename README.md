@@ -3,6 +3,6 @@
 
 [![](http://img.youtube.com/vi/Q0NIwiLKgRA/0.jpg)](http://www.youtube.com/watch?v=Q0NIwiLKgRA)
 
-<a href="https://www.youtube.com/watch?v=Q0NIwiLKgRA&feature=youtu.be" target="_blank">
- <img src="http://img.youtube.com/vi/Q0NIwiLKgRA/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
-</a>
+[//]: # (Image References)
+[image1]: ./images/cte.png "Cross-track error"
+[image2]: ./images/steering.png "Steering command error"
