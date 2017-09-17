@@ -15,6 +15,14 @@ From these results, it is clear that the proportional and proportional-integral 
 
 The overall performance of our AV in the simulator track can be seen in the video below.
 
-[![](http://img.youtube.com/vi/Q0NIwiLKgRA/0.jpg)](http://www.youtube.com/watch?v=Q0NIwiLKgRA)
+[![](http://img.youtube.com/vi/qpNthzagWXM/0.jpg)](http://www.youtube.com/watch?v=qpNthzagWXM)
 
+The speed of our AV is regulated by another PID controller with the gains set as Kp = 7.5E-1, Ki = 15E-5, and Kd = 1.15E-1. This controller provides the throttle command to maintain a desired speed (55 MPH in the case shown above). This command is further compensated by the square of the cross-track error multiplied by a constant to guarantee a safe speed when the cross-track error exceeds certain values. The effect of such a regulation is illustrated in the videos below.
 
+### Safe speed controller
+
+[![](http://img.youtube.com/vi/b7ZyBnz5fRc/0.jpg)](http://www.youtube.com/watch?v=b7ZyBnz5fRc)
+
+### Unsafe speed controller
+
+[![](http://img.youtube.com/vi/OdXrvxOGaEQ/0.jpg)](http://www.youtube.com/watch?v=OdXrvxOGaEQ)
